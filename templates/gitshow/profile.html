@@ -1,0 +1,18 @@
+{% extends 'gitshow/index.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<table frame="void" >
+    <tr>
+    <td align='center' ><img src="{{ ava }}" width="100" height="100" align="center" ></td>
+    </tr>
+    <tr>
+    <td align='center' ><h2>{{ name }}</h2></td>
+    </tr>
+    </table>
+    {% if repos %}
+       {% for rep in repos %}
+           <p>{{ rep }}</p>
+       {% endfor %}
+    {% endif %}
+{% endblock %}
